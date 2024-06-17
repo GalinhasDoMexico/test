@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const blogPostsContainer = document.getElementById('blog-posts');
   const searchForm = document.getElementById('search-form');
   const searchInput = document.getElementById('search-input');
-  const tagSelect = document.getElementById('tag-selector'); // Might be a typo, corrected to "tag-selector"
+  const tagSelect = document.getElementById('tag-selector');
 
-  // Array of blog posts (replace with your own data)
+  // Array of blog posts
   const blogPosts = [
     {
       title: 'Título do Primeiro Post',
@@ -78,8 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     event.preventDefault();
     const searchTerm = searchInput.value.toLowerCase();
 
-    // Use a variable to store the tag (if any)
-    let selectedTag = tagSelect.value;
+    let selectedTag = tagSelect.value; // Get the selected tag
 
     // Check if there's a tag in the URL parameter
     const urlParams = new URLSearchParams(window.location.search);
