@@ -38,25 +38,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Get selected tag from URL parameter (if any)
   const urlParams = new URLSearchParams(window.location.search);
   const selectedTagFromUrl = urlParams.get('tags');
 
+  // Initial rendering based on tag from URL or all posts
   let filteredPosts;
   if (selectedTagFromUrl) {
     filteredPosts = filterBlogPosts(blogPosts, '', selectedTagFromUrl);
   } else {
-    filteredPosts = blogPosts;
+    filteredPosts = blogPosts; // Render all posts if no tag in URL
   }
   renderBlogPosts(filteredPosts);
 
-  searchForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const searchTerm = searchInput.value.toLowerCase();
-    const selectedTag = tagSelect.value;
-    const filteredPosts = filterBlogPosts(blogPosts, searchTerm, selectedTag);
-    renderBlogPosts(filteredPosts);
-  });
-
+  // Function to filter posts by title, description, and tags
   function filterBlogPosts(posts, searchTerm, selectedTag) {
     let filteredPosts = posts;
 
@@ -65,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return post.tags.includes(selectedTag);
       });
     }
-
 
     if (searchTerm !== '' || selectedTag === '') {
       filteredPosts = filteredPosts.filter(function(post) {
@@ -79,6 +73,28 @@ document.addEventListener('DOMContentLoaded', function() {
     return filteredPosts;
   }
 
+  // Function to handle search form submission
+  searchForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const searchTerm = searchInput.value.toLowerCase();
+
+    // Use a variable to store the tag (if any)
+    let selectedTag = tagSelect.value;
+
+    // Check if there's a tag in the URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedTagFromUrl = urlParams.get('tags');
+
+    // Prioritize the URL parameter tag if it exists
+    if (selectedTagFromUrl) {
+      selectedTag = selectedTagFromUrl;
+    }
+
+    const filteredPosts = filterBlogPosts(blogPosts, searchTerm, selectedTag);
+    renderBlogPosts(filteredPosts);
+  });
+
+  // Function to handle tag select change
   tagSelect.addEventListener('change', function() {
     const selectedTag = tagSelect.value;
     const filteredPosts = filterBlogPosts(blogPosts, '', selectedTag);
