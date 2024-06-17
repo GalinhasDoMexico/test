@@ -1,0 +1,118 @@
+<html lang="pt-br">
+<head>
+
+<title>Scripts / Projetos / COFM Brasil</title>
+<link rel="icon" href="/cdn/img/favicon/avatar.png" type="image/x-icon">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="title" content="Scripts | Projetos / COFM Brasil">
+<meta name="description" content="Aqui você verá scripts feitos (ou não) por mim.">
+<meta name="theme-color" content="#1D0B37">
+<meta name="twitter:image" content="/cdn/img/metabgindex.png">
+<meta name="twitter:site" content="@GalinhasDoMexico">
+<meta name="twitter:creator" content="@ChickenOfMexico">
+
+<!-- Fonte e CSS -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Pacifico">
+  <link rel="stylesheet" href="/cdn/css/global.css">
+  <link rel="stylesheet" href="/cdn/css/other.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- Scripts -->
+  <script src="/cdn/js/mobile-menu.js"></script>
+  <script src="/cdn/js/autoNavAndFooter.js"></script>
+  <script src="/cdn/js/menuHref.js"></script>
+  <script src="/cdn/js/theme-switcher.js"></script> 
+  <script src="/cdn/js/choose-language.js"></script>
+  <script src="/cdn/js/lgbt-mode.js"></script>
+  <script src="/cdn/js/updateVersionText.js"></script>
+
+</head>
+<header id="autoNavBr">
+</header>
+
+<body>
+
+<h1 class="title">Scripts / Projetos</h1>
+
+<p class="text">Olá, aqui você verá scripts feitos (ou não) por mim.</p>
+<p class="text" style="margin: 1">Lembrando que os scripts são mal feitos e podem explodir, explodir sua casa e blabla...</p>
+<br>
+<br>
+<hr style="width:50%">
+<br>
+<br>
+<h3 class="text">Script "Discord Rich Presence: CPU, RAM, and Background Processes (Python)"</h3>
+<img class="center" src="/cdn/img/projects/scripts/rpccpuram.png" alt="Script "Discord Rich Presence: CPU, RAM, and Background Processes (Python)" width="80%">
+<p class="text">Sim, eu fiz isso usando o ChatGPT, mas funciona... Eu acho, bem este abaixo é os requisitos para executar este script.</p>
+<br>
+<p class="text"><b>Requisitos</b></p>
+<div class="list">
+  <ul class="myUL">
+    <li><a class="text" style="text-decoration: none" href="https://python.org/">Python</a></li>
+    <li>Plugin "pypresence" (pip install pypresence)</li>
+    <li>Plugin "pygetwindow" (pip install pygetwindow)</li>
+    <li>Plugin "psutil" (pip install psutil)</li>
+  </ul>
+</div>
+<br>
+<br>
+<br>
+<p class="text"><b>Imagens (Padrão)</b></p>
+<p class="text">Imagens que vem por padrão no Discord Rich Presence</p>
+<div class="mine-main-row">
+<div class="mine-row">
+  <div class="scripts-column">
+    <img src="https://i.ytimg.com/vi/Qb884krIWxA/maxresdefault.jpg" style="width:100%">
+    <figcaption style="text-align: center;">Aparece quando está entre <br> 0% a 50% (CPU ou RAM)</figcaption>
+  </div>
+  <div class="scripts-column">
+    <img src="https://media.tenor.com/nFyjFsyn5j8AAAAd/scout-tf2-tf2.gif" style="width:100%">
+    <figcaption style="text-align: center;">Aparece quando está entre <br> 50% a 80% (CPU ou RAM)</figcaption>
+  </div>
+  <div class="scripts-column">
+    <img src="https://s2-techtudo.glbimg.com/_V0iOO96UtwQBEwT4-jd_n8Urso=/0x0:695x395/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2018/s/p/bpAoUXQVGlgd3UssBLAA/tela-azul-da-morte-windows-10.jpg" style="width:100%">
+    <figcaption style="text-align: center;">Aparece quando está entre <br> 86% a 100% (CPU ou RAM)</figcaption>
+  </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<p class="text"><b>Script</b></p>
+<center>
+ <embed type="text/html" src="/cdn/txt/dscrpcscript.txt"  width="500" height="300">
+</center>
+
+  <div class="conteinerbutton">
+    <div class="centerbutton">
+      <button class="button" onclick="copiarTexto()">Copiar Script</button>
+    </div>
+  </div>
+
+<script>
+function copiarTexto() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', '/cdn/txt/dscrpcscript.txt', true);
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      var texto = xhr.responseText;
+      var input = document.createElement('input');
+      input.value = texto;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      alert('Texto copiado para a área de transferência!');
+    }
+  };
+  xhr.send();
+}
+</script>
+<footer id="autoFooterBr">
+</footer>
+</body>
+</html>

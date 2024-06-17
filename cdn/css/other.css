@@ -1,0 +1,408 @@
+/* all */
+.body-color {
+  background-color: var(--body-color);
+  background-image: none;
+}
+
+figcaption {
+  font-family: var(--roboto);
+  color: var(--white-color);
+}
+
+/* index.html */
+.index-img {
+  border-radius: 160px;
+} 
+
+.index-center {
+  display: block;
+  margin-top: 80;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 100%;
+  max-width: 100%;
+  box-shadow: 0px 0px 8px #000000;
+}
+
+.footer-index {
+  color: var(--white-color);
+  text-align: var(--text-align-center);
+  font-family: var(--roboto);
+  font-style: var(--font-style);
+  margin-top: 50;
+  background-image: var(--rooter-background-image);
+  background-size: 100% 40%; 
+  background-repeat: no-repeat; 
+  margin: 0;
+  bottom: flex;
+  position:absolute;
+  width:100%;
+  transition: background-image 0.5s ease, color 0.5s ease;
+}
+
+/* about-me.html */
+.aboutme-text {
+  color: var(--white-color);
+  font-family: var(--roboto);
+  text-align: justify;
+  max-width: 900px;
+  padding: 25px;
+  margin: auto;
+  transition: color 0.5s ease;
+}
+
+.aboutme-status {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutme-status2 {
+  margin: 0 5px;
+}
+
+@media (max-width: 767px) {
+  .aboutme-status {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutme-status2 {
+    margin: 10px 0;
+  }
+}
+
+/* projects/* */
+.topic-title {
+  background-color: var(--rooter-background-color);
+  color: var(--white-color);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 0% 5% -5%;
+  font-family: Days One;
+  font-size: 24px;
+  text-align: left;
+  transition: background-color 0.5s ease, color 0.5s ease ;
+}
+
+/* projects/minecraft.html */
+.minebodyimg {
+  background-image: var(--projects-mine-background-image);
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+  transition: background-image 0.5s ease
+}
+
+/* projects/minecraft.html and projects/design-2d */
+@media (max-width: 768px) {
+  .mine-main-row .mine-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .mine-main-row .mine-row img {
+    flex-basis: auto;
+  }
+  .scripts-column {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.mine-main-row {
+  background-color: var(--rooter-background-color);
+  color: var(--white-color);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 0% 5%;
+  transition: background-color 0.5s ease;
+}
+
+.mine-column {
+  text-align: center;
+  padding: 5%;
+}
+
+.mine-row {
+  display: flex;
+  justify-content: center;
+}
+
+.mine-row img {
+  min-width: 200px;
+  flex-basis: calc(50% - 5%);
+  box-shadow: none;
+}
+
+/* projects/scripts.html */
+.button {
+  background-color: #1D0B37;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px; 
+  font-family: Pacifico;
+}
+
+.centerbutton {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.conteinerbutton {
+  position: relative;
+}
+
+embed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+div.list {
+  text-align: var(--text-align-center);
+}
+
+ul.myUL {
+  display: inline-block;
+  text-align: left;
+  color: var(--white-color);
+  font-family: var(--roboto);
+}
+
+.scripts-column {
+  flex: 33.33%;
+  padding: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 50%;
+  max-width: 80%;
+  height: auto;
+}
+
+/* link/youtube */
+
+#channel-info {
+  text-align: center;
+  padding: 20px;
+}
+
+#profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#channel-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+#channel-name {
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-left: 40px;
+  color: var(--white-color);
+  font-family: var(--roboto);
+  transition: color 0.5s ease;
+}
+
+#channel-description {
+  font-size: 16px;
+  margin-right: 20px;
+  margin-left: 40px;
+  margin-top: 10px;
+  color: var(--white-color);
+  font-family: var(--roboto);
+  transition: color 0.5s ease;
+}
+
+#channel-button {
+  margin-top: 10px;
+  background-color: var(--white-color);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-left: 40px;
+  color: var(--body-color);
+  font-family: var(--roboto);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Player */
+    /* Estilos para o contêiner do player */
+#player-container {
+  position: fixed;
+  top: 85%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  background-color: var(--body-color);
+  border: 10px solid var(--rooter-background-color);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+#youtube-player {
+  width: 186.6px;
+  height: 105px;
+}
+
+/* Estilos para o botão */
+.button-player {
+  display: flex;
+  align-items: center;
+  background-color: #1D0B37;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px; 
+  font-family: Roboto;
+  margin-right: 3px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Estilos para o ícone (SVG) */
+.icon {
+  fill: #000000;
+  width: 10px;
+  height: 10px;
+  transition: fill 0.3s ease;
+}
+
+/* Estilos para alterar a cor do ícone quando o botão é hover/foco */
+.button:hover .icon,
+.button:focus .icon {
+    fill: #8c00ff;
+    transition: fill 0.3s ease;
+}
+
+/* Blog */
+form {
+  margin-left: 40%;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  width: 200px;
+  background: var(--white-color);
+  color: var(--body-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+button {
+  padding: 5px 10px;
+  color: var(--body-color);
+  background-color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+main {
+  padding: 20px;
+}
+
+.blog-post {
+  background-image: var(--background-blog-search);
+  background-size: 100% 120%;
+  background-repeat: no-repeat;
+  color: var(--white-color);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 0% 5%;
+  transition: background-image 0.5s ease, color 0.5s ease;
+  margin-bottom: 20px;
+}
+
+.blog-post img {
+  max-width: 100%;
+}
+
+.blog-post a {
+font-family: var(--roboto);
+color: var(--blog-a);
+font-weight: bold;
+transition: color 0.5s ease;
+}
+
+.blog-post h2 {
+  color: var(--white-color);
+  margin: 30;
+  font-family: var(--roboto);
+  transition: color 0.5s ease;
+  margin-top: 0;
+}
+
+.blog-post p {
+  color: var(--white-color);
+  font-family: var(--roboto);
+  transition: color 0.5s ease;
+  margin-top: 5px;
+  margin-bottom: 4px;
+}
+
+.blog-post .tags {
+  margin-bottom: 5px;
+}
+
+.blog-post .tags span {
+  background-color: var(--tags-color);
+  border-radius: 5px;
+  padding: 2px 8px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    margin-left: 12.5%;
+    margin-top: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+    width: 200px;
+    background: var(--white-color);
+    color: var(--body-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  .blog-selector {
+    margin-left: 29%;
+    margin-top: 10px;
+  }
+}
+
+/* Transparency */
+.simple-section {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
