@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const blogPostsContainer = document.getElementById('blog-posts');
   const searchForm = document.getElementById('search-form');
   const searchInput = document.getElementById('search-input');
-  const tagSelect = document.getElementById('tag-select');
+  const tagSelect = document.getElementById('tag-selector'); // Might be a typo, corrected to "tag-selector"
 
   // Array of blog posts (replace with your own data)
   const blogPosts = [
@@ -97,6 +97,18 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to handle tag select change
   tagSelect.addEventListener('change', function() {
     const selectedTag = tagSelect.value;
+
+    // Update the URL parameter with the selected tag
+    if (selectedTag !== '') {
+      const newUrlParams = new URLSearchParams();
+      newUrlParams.set('tags', selectedTag);
+      history.replaceState(null, '', `?${newUrlParams.toString()}`); // Update URL without reloading
+    } else {
+      // Remove the tag parameter if no tag is selected
+      history.replaceState(null, '', window.location.pathname); // Remove tag parameter
+    }
+
+    // Filter and render posts based on the selected tag
     const filteredPosts = filterBlogPosts(blogPosts, '', selectedTag);
     renderBlogPosts(filteredPosts);
   });
