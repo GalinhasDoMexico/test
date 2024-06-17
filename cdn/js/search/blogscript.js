@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const blogPostsContainer = document.getElementById('blog-posts');
   const searchForm = document.getElementById('search-form');
   const searchInput = document.getElementById('search-input');
-  const tagSelect = document.getElementById('tag-selector');
+  const tagSelect = document.getElementById('tagSelect');
 
   // Array of blog posts
   const blogPosts = [
