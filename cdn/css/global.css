@@ -5,6 +5,7 @@
 :root {
     --body-color: #111111;
     --white-color: #ffffff;
+    --black-color: #000000;
     --roboto: Roboto;
     --text-decoration: none;
     --text-align-center: center;
@@ -351,6 +352,7 @@ footer {
 .light-mode {
     --body-color: #d4d4d4;
     --white-color: #000000;
+    --black-color: #FFFFFF;
     --roboto: Roboto;
     --text-decoration: none;
     --text-align-center: center;
