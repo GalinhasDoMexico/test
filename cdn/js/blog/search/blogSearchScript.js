@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
       date: 'Postado dia: 19/06/2024',
       url: 'about',
       categoria: ['Sobre o Blog'],
-      tags: ['Sobre o Blog'],
+      tags: ['Sobre o Blog', 'Teste'],
       isAboutBlog: true
     },
     // Posts "Destaques"
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
         postElement.innerHTML += `
         <div class="${post.isAboutBlog ? 'aboutblog-post' : post.isFeatured ? 'featured-post' : ''}">
-          <h2><span title="Categoria: ${post.categoria[0]}"><a style="color: var(--black-color);" href="?tags=${post.categoria[0]}">${post.categoria[0]}</a></span> ${post.title}</h2>
+        <h2><span title="Categoria: ${post.categoria[0]}"><a style="color: var(--black-color);" href="?tags=${post.categoria[0]}">${post.categoria[0]}</a></span> ${post.title}</h2>
         </div>
         <p title="Descrição: ${post.description}">${post.description}</p>
         <p title="${post.date}" style="opacity: 0.5">${post.date}</p>

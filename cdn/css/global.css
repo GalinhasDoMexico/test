@@ -31,9 +31,14 @@
     --tags-color: #000000;
     --blog-a: #8036e7;
 
-    /* projects.html */
-    --projects-mine-background-image: url('../img/projects/minecraftbg.png');
-    --projects-other-background-image: url('../img/backgroundsite_dark.png');
+    /* portfolio */
+    --background-portfolio-search: url('../img/blog/background-blog-search.webp');
+    --tags-color: #000000;
+    --portfolio-a: #8036e7;
+
+    /* portfolio.html */
+    --portfolio-mine-background-image: url('../img/portfolio/minecraftbg.png');
+    --portfolio-other-background-image: url('../img/backgroundsite_dark.png');
 }
 
 body {
@@ -71,19 +76,14 @@ nav {
     transition: background-image 0.5s ease;
 }
 
-a.nav-active {
-    color: #8a56f7;
-    text-decoration: var(--text-decoration);
-    font-family: Montserrat; 
-    margin-left: var(--nav-rooter-margin);
-    margin-right: var(--nav-rooter-margin);
-    transition: color 0.5s ease;
+.navBlog {
+    display: none;
 }
-  
+
 a.nav-settings {
     color: var(--white-color);
+    font-family: Montserrat; 
     text-decoration: var(--text-decoration);
-    font-family: Montserrat;
     margin-left: var(--nav-rooter-margin);
     margin-right: var(--nav-rooter-margin);
     transition: color 0.5s ease;
@@ -125,6 +125,12 @@ a.nav-settings {
     background-color: var(--mobile-submenu-background);
     transition: background-color 0.5s ease;
 }
+
+#mySubLinksBlog {
+    display: none;
+    background-color: var(--mobile-submenu-background);
+    transition: background-color 0.5s ease;
+}
   
 .topnav a {
     color: var(--white-color);
@@ -151,27 +157,56 @@ a.nav-settings {
 }
 
 @media screen and (max-width: 768px) {
+.nav-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .navigation-container {
-    display: none; /* Hide navigation links on mobile */
-    }
-    
-.mobile-menu {
-    display: block; /* Show hamburger menu on mobile */
+    display: none;
+}
+
+.navBlog {
+    display: none;
+}
+
+.mobile-menu{
+    display: block;
     margin-right: 30%;
     margin-top: -8%;
-    }
+}
 
 .menu-icon {
+    text-decoration: var(--text-decoration);
+    font-family: Montserrat; 
+    margin-left: var(--nav-rooter-margin);
+    margin-right: var(--nav-rooter-margin);
+    transition: color 0.5s ease;
     margin-right: 70%;
-    }    
+    font-weight: bold;
+}
+
+a.menu-icon {
+    text-decoration: var(--text-decoration);
+    font-family: Montserrat; 
+    margin-left: var(--nav-rooter-margin);
+    margin-right: var(--nav-rooter-margin);
+    transition: color 0.5s ease;
+    color: var(--white-color);
+    margin-right: 70%;
+    font-weight: bold;
+}  
 
 .language-selector {
-    margin-left: 60%;
-    }
+    position: absolute; 
+    right: 50;
+}
 
 .theme-class {
     margin-top: 1%;
-    }
+}
 }
 
 #menu {
@@ -332,6 +367,14 @@ option {
     transition: fill 0.5s ease;
 }
 
+.footer-svg.bsky {
+    height: 50px; 
+    width: 50px; 
+    fill: var(--svg-fill-color); 
+    padding: -10px;
+    transition: fill 0.5s ease;
+}
+
 footer {
     color: var(--white-color);
     text-align: var(--text-align-center);
@@ -345,6 +388,11 @@ footer {
     position:absolute;
     width:100%;
     transition: background-color 0.5s ease, background-image 0.5s ease, color 0.5s ease;
+}
+
+/* Tags para não aparecer em todas as páginas (ou não) */
+.versionblog {
+    display: none;
 }
 
 /* Modo claro (MrPowerGamerBR be like) */
@@ -378,8 +426,13 @@ footer {
     --tags-color: #FFFFFF;
     --blog-a: #351463;
 
-    /* projects.html */
-    --projects-mine-background-image: url('../img/projects/minecraftbg_light.png');
+    /* portfolio */
+    --background-portfolio-search: url('../img/blog/background-light-blog-search.webp');
+    --tags-color: #FFFFFF;
+    --portfolio-a: #351463;
+
+    /* portfolio.html */
+    --portfolio-mine-background-image: url('../img/portfolio/minecraftbg_light.png');
 }
 
 /* LGBT */

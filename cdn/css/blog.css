@@ -1,10 +1,24 @@
+.navBlog {
+  margin-top: -6%;
+  display: block;
+}
+
+.versionblog {
+  display: block;
+}
+
 .language-selector {
  display: none;
 }
 
 .hidden-tag {
-    display: none;
-}  
+ display: none;
+}
+
+form {
+ margin-left: 29.5%;
+ margin-top: 10px;
+}
 
 .featured-post span {
  background-color: #f0e68c;
@@ -95,6 +109,10 @@ input[type="text"] {
  margin-left: 29%;
  margin-top: 10px;
 }
+
+.navBlog {
+ display: none;
+}
 }
 
 /* Blog Posts */
@@ -129,3 +147,31 @@ input[type="text"] {
  width: 15px; 
  transition: fill 0.5s ease;
 }
+
+/* Tags */
+.tagsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tagsList div {
+    margin: 30px;
+}
+
+.tagsListDiv {
+    background-color: var(--rooter-background-color);
+    color: var(--white-color);
+    padding: 7%;
+    border-radius: 10px;
+    margin: 0% 0%;
+    transition: background-color 0.5s ease;
+}
+
+.tagsListDiv a {
+    grid-template-columns: 1fr;
+    display: grid;
+    margin: 10px;
+    margin-right: 5px;
+} 

@@ -335,3 +335,50 @@ main {
   margin: 0 auto;
   cursor: pointer;
 }
+
+/* Seções */
+.selectorNav {
+ margin-left: 45%;
+ margin-right: 50%;
+}
+
+.expandable-section {
+  background-image: none;
+}
+
+.expandable-content {
+  display: none;
+}
+
+.expandable-section.expanded .expandable-content {
+  display: block;
+  height: auto;
+}
+
+.bsectionV {
+  opacity: 100%;
+  padding-left: 1%; 
+  font-size: 10px; 
+  position: absolute; 
+  transform: translateY(100%);
+  transition: opacity 0.5s ease;
+}
+
+.bsectionV.transparent {
+ opacity: 0%;
+ transition: opacity 0.5s ease;
+}
+
+.sectionLog {
+  display: center;
+  justify-content: center;
+  grid-template-columns: auto 1fr;
+  text-align: center;
+}
+
+.sectionLogH1 {
+  color: var(--white-color);
+  font-family: var(--roboto);
+  transition: color 0.5s ease;
+  font-size: 30px;
+}
