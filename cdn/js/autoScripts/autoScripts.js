@@ -36,7 +36,7 @@ function addPageSpecificScripts() {
 
   // Adiciona scripts específicos para a página /portfolio/design-2d
   if (path === '/test/br/portfolio/design-2d' || path === '/test/us/portfolio/design-2d') {
-      addScript('/cdn/js/portfolio/portfolioImageFullscreen.js', 'defer');
+      addScript('/test/cdn/js/portfolio/portfolioImageFullscreen.js', 'defer');
       if (lang === 'pt-br') {
           addScript('/test/cdn/js/portfolio/portfolio2DDesignSearchScript.js', 'defer');
       } else if (lang === 'en-us') {
